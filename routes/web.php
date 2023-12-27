@@ -13,7 +13,7 @@ use App\Models\Orphan_information;
 use App\Http\Controllers\AdoptionController;
 use App\Http\Controllers\HealthController;
 use App\Models\Application;
-use App\Http\Controllers\ShowAdopterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,9 +27,6 @@ use App\Http\Controllers\ShowAdopterController;
 
 Route::get('/', function () {
     return view('welcome');
-});
-Route::get('/about', function () {
-    return view('aboutUs');
 });
 
 //redirect to the registration page
@@ -56,9 +53,12 @@ Route::post('change_attendance', [AttendanceController::class, 'change'])->middl
 //to view all the users
 Route::get('view_users', [ViewUsersController::class, 'index'])->middleware('auth'); //show a list of all the users
 //view a particular adopter
-Route::get('show_adopter/{show_adopter}', [ShowAdopterController::class, 'index'])->middleware('auth');
-
-
+Route::get('show_adopter/{show_adopter}', function($id) //show a particular adopter based on id
+{
+    return view('one_user', [
+        'user' => User::findorFail($id)
+    ]);
+});
 //view a particular adopter
 // Route::get('show_children/{show_adopter}', function($id) //show a particular adopter based on id
 // {
@@ -70,13 +70,15 @@ Route::get('show_adopter/{show_adopter}', [ShowAdopterController::class, 'index'
 Route::get('adoption_request', [AdoptionController::class, 'index'])->middleware('auth');
 Route::post('adoption_request', [AdoptionController::class, 'store'])->middleware('auth');
 //for manager to view pending applications
-Route::get('view_applications', function () {
-    return view('view_applications', [
+Route::get('view_applications', function()
+{
+    return view('view_applications',[
         'applications' => Application::all()
     ]);
 });
 
-Route::get('process_request/{user_id}', function ($id) {
+Route::get('process_request/{user_id}', function($id)
+{
     return view('process', [
         'user' => Application::findorFail($id)
     ]);
@@ -85,8 +87,8 @@ Route::post('application_processed', [AdoptionController::class, 'storeReply'])-
 
 Route::get('track_request', [AdoptionController::class, 'request'])->middleware('auth');
 Route::get('health', [HealthController::class, 'index'])->middleware('auth');
-Route::get('update_health/{user_id}', function ($id) {
-    return view('update_health', [
+Route::get('update_health/{user_id}', function($id){
+    return view('update_health',[
         'user' => Orphan_information::findorFail($id)
     ]);
 })->middleware('auth');

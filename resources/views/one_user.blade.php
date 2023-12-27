@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-<link rel="stylesheet" href="css/table.css">
+<link rel="stylesheet" href="/css/table.css">
 <div class="container" style="margin-top:7rem;">
 <h2>Information</h2>
 <table class="">

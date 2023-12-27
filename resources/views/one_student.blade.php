@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+<link rel="stylesheet" href="/css/table.css">
 <h2>Information</h2>
 <table class="table table-bordered table-dark text-bg-dark">
     <tr>

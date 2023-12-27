@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
-    <div>
+    <div class="container" style="margin-top: 7rem;">
         Registered successfully!
-        <button><a href="/adopter_dashboard">OK</a></button>
+        <a class="btn btn-primary" href="/adopter_dashboard">Proceed to Dashboard</a>
     </div>
 @endsection
