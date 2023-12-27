@@ -1,6 +1,8 @@
 @extends('layout')
 @section('content')
-    <div>
+
+<link rel="stylesheet" href="css/table.css">
+    <div style="margin-top: 7rem;" class="container">
         <form method="POST" action="/attendance">
             @csrf
             <label for="date">Enter the date:</label>

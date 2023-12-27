@@ -1,39 +1,27 @@
 @extends('layout')
 @section('content')
-<h1>Users List</h1>
-<div>
+<link rel="stylesheet" href="css/table.css">
+<div class="container" style="margin-top:7rem;">
+    <h1>Users List</h1>
     <h3>Adopters</h3>
-        <table class="table table-bordered table-dark text-bg-dark">
+    <table class="">
+        <thead>
             <tr>
-                <td>Name</td>
-                <td>ID</td>
+                <th>Name</th>
+                <th>ID</th>
             </tr>
-            @foreach($users as $user)
-                <tr>
-                    @if($user->user_type == 'adopter')
-                        <td><a href="show_adopter/{{$user->id}}">{{$user->name}}</a></td>
-                        <td>{{$user->id}}</td>
-                    @endif
-                </tr>
-            @endforeach
-            
-        </table>
-
-    <!-- <h3>Students</h3>
-    <table class="table table-bordered table-dark text-bg-dark">
-        <tr>
-            <td>Name</td>
-            <td>ID</td>
-        </tr>
+        </thead>
         @foreach($users as $user)
+        <tbody>
             <tr>
-                @if($user->user_type == 'orphan')
-                    <td><a href="show_children/{{$user->id}}">{{$user->name}}</a></td>
-                    <td>{{$user->id}}</td>
+                @if($user->user_type == 'adopter')
+                <td><a href="show_adopter/{{$user->id}}">{{$user->name}}</a></td>
+                <td>{{$user->id}}</td>
                 @endif
             </tr>
+        </tbody>
         @endforeach
-            
-        </table> -->
+
+    </table>
 </div>
 @endsection

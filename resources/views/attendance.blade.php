@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-    <div>
+    <div style="margin-top: 7rem;">
         <form method="POST" action="/attendance" >
             <h1>ACHTON!</h1>
             @foreach($children as $user)

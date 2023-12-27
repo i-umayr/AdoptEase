@@ -1,0 +1,22 @@
+.box {
+    height: 200px;
+    width: 450px;
+    margin: 20px auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    background: rgb(26, 70, 146);
+    background: -moz-linear-gradient(45deg, rgba(26, 70, 146, 1) 0%, rgba(32, 92, 189, 1) 99%);
+    background: -webkit-linear-gradient(45deg, rgba(26, 70, 146, 1) 0%, rgba(32, 92, 189, 1) 99%);
+    background: linear-gradient(45deg, rgba(26, 70, 146, 1) 0%, rgba(32, 92, 189, 1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a4692', endColorstr='#205cbd', GradientType=1);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .box:hover {
+    background: rgb(31, 84, 175);
+    background: -moz-linear-gradient(45deg, rgba(31, 84, 175, 1) 0%, rgba(39, 109, 227, 1) 99%);
+    background: -webkit-linear-gradient(45deg, rgba(31, 84, 175, 1) 0%, rgba(39, 109, 227, 1) 99%);
+    background: linear-gradient(45deg, rgba(31, 84, 175, 1) 0%, rgba(39, 109, 227, 1) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1f54af', endColorstr='#276de3', GradientType=1);
+  }

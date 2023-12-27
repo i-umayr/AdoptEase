@@ -1,19 +1,24 @@
 @extends('layout')
 @section('content')
+<link rel="stylesheet" href="css/table.css">
+<div class="container" style="margin-top:7rem;">
 <h2>Information</h2>
-<table class="table table-bordered table-dark text-bg-dark">
+<table class="">
+    <thead>
     <tr>
-        <td>ID</td>
-        <td>First Name</td>
-        <td>Last Name</td>
-        <td>Email</td>
-        <td>Address</td>
-        <td>Income</td>
-        <td>Marital Status</td>
-        <td>Family Size</td>
-        <td>Occupation</td>
-        <td>Gender</td>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Income</th>
+        <th>Marital Status</th>
+        <th>Family Size</th>
+        <th>Occupation</th>
+        <th>Gender</th>
     </tr>
+    </thead>
+    <tbody>
     <tr>
         <td>{{$user->id}}</td>
         <td>{{$user->User_access->first_name}}</td>
@@ -26,6 +31,8 @@
         <td>{{$user->User_access->occupation}}</td>
         <td>{{$user->User_access->gender}}</td>
     </tr>
+    </tbody>
 </table>
+</div>
 @endsection
 
