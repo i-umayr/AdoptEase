@@ -1,10 +1,5 @@
 @extends('layout')
 @section ('content')
-<<<<<<< Updated upstream
-  <div>
-    THIS IS THE WELCOME PAGE
-  </div>
-=======
 
 <div class="hero-wrap js-fullheight">
             <div class="overlay"></div>
@@ -544,6 +539,5 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
         <script src="js/google-map.js"></script>
         <script src="js/main.js"></script>
->>>>>>> Stashed changes
   
 @endsection
