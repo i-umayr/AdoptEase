@@ -20,7 +20,60 @@ body {
     </style>
 </head>
 <body >
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+<nav
+            class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+            id="ftco-navbar"
+        >
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Adopt Ease</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#ftco-nav"
+                    aria-controls="ftco-nav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="oi oi-menu"></span> Menu
+                </button>
+
+                <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a href="/" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="domain.html" class="nav-link">Domain</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="hosting.html">Hosting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item cta">
+                            <a href="contact.html" class="nav-link"
+                                ><span>Get started</span></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="p-4">
+    @yield('content')
+</div>
+</body>
+
+{{-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -65,4 +118,4 @@ body {
 <div class="p-4">
     @yield('content')
 </div>
-</body>
+</body> --}}
