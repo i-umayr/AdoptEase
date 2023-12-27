@@ -8,7 +8,7 @@
                 >
                     <img
                         class="one-third js-fullheight align-self-end order-md-last img-fluid"
-                        src="{{url('../css/images/flower.jpg')}}"  
+                        src="{{url('images/undraw_business_plan_5i9d.svg')}}"  
                         alt=""
                     />
                     <div
